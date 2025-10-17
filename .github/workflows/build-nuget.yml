@@ -36,6 +36,7 @@ jobs:
 
       - name: Pack NuGet package
         run: dotnet pack -c Release src/GitLabSourceLink/GitLabSourceLink.csproj --no-build
+        # Uses project's default PackageOutputPath: nuget-packages/
 
       - name: Upload NuGet package artifact
         uses: actions/upload-artifact@v3
