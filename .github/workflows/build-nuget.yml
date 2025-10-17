@@ -35,7 +35,7 @@ jobs:
         run: dotnet build -c Release src/GitLabSourceLink/GitLabSourceLink.csproj --no-restore
 
       - name: Pack NuGet package
-        run: dotnet pack -c Release src/GitLabSourceLink/GitLabSourceLink.csproj -o nuget-packages --no-build
+        run: dotnet pack -c Release src/GitLabSourceLink/GitLabSourceLink.csproj --no-build
 
       - name: Upload NuGet package artifact
         uses: actions/upload-artifact@v3
